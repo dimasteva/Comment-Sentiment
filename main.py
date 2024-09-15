@@ -23,17 +23,14 @@ name = 'ENTER_YOUR_NAME'
 password = 'ENTER_YOUR_PASS'
 email = 'ENTER_YOUR_EMAIL'
 
-# Podesite putanju do vašeg ChromeDriver-a
 chrome_options = Options()
 service = Service(executable_path=ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=chrome_options)
 
 try:
-    # Otvorite stranicu
     driver.get('https://x.com/i/flow/login')
 
-    # Čekanje da se stranica učita
-    time.sleep(5)  # Možda ćete morati da prilagodite vreme čekanja
+    time.sleep(5)
 
     entry = WebDriverWait(driver, 20).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, 'input.r-30o5oe.r-1dz5y72.r-13qz1uu.r-1niwhzg.r-17gur6a.r-1yadl64.r-deolkf.r-homxoj.r-poiln3.r-7cikom.r-1ny4l3l.r-t60dpp.r-fdjqy7'))
