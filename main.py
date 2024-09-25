@@ -13,7 +13,7 @@ import requests
 def check_domain(url):
     parsed_url = urlparse(url)
     domain = parsed_url.netloc
-    
+
     if "reddit.com" in domain:
         return 1
     elif "youtube.com" in domain:
@@ -51,7 +51,6 @@ def main():
 
     posts = []
     scroll_down_times = []
-    #print("Enter URLs of posts you want to analyze (press CTRL + D or CTRL + Z to finish):")
     while True:
         try:
             print("Enter URL of post you want to analyze (press CTRL + D or CTRL + Z to finish):")
